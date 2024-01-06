@@ -79,7 +79,7 @@ export default function ChattRoom() {
       </header>
 
       {/* Main chat body */}
-      <div className='msgBody h-full overflow-y-scroll gap-3 flex flex-col px-2' ref={chatBodyRef}>
+      <div className='msgBody h-full overflow-y-scroll gap-3 flex flex-col p-2' ref={chatBodyRef}>
         <h2 className='text-center text-[grey] py-5 px-3'>Welcome to the chat 👋 {displayName}</h2>
         {/* Rendering messages */}
         {snapshot && snapshotToArray(snapshot).map((chat) => <MessageComponent user={user[0]} data={chat} />)}
@@ -96,7 +96,7 @@ export default function ChattRoom() {
           className='w-full text-[#000] px-3 outline-none'
           value={message}
         />
-        <button className=' bg-btnBg px-3 py-2 rounded'>Send</button>
+        <button className=' bg-btnBg px-3 py-4 rounded'>Send</button>
       </form>
     </div>
   );

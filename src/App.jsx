@@ -10,7 +10,7 @@ function App() {
 
 
   return (
-    <div className="App  bg-bodyBgColor  text-[#fff] h-full w-full flex items-center justify-center flex-col">
+    <div className="App  bg-bodyBgColor  text-[#fff] h-screen w-full flex items-center justify-center flex-col">
         {signed ? <ChattRoom/> : <SignIn/>}
     </div>
   )
