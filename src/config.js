@@ -3,7 +3,7 @@ import { getAuth ,GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyD-V97FbwQBbLIkbvn98P614nlkKSoGXUk",
-  authDomain: "auth-979d8.firebaseapp.com",
+  authDomain: "https://chatt-room.vercel.app",
   databaseURL: "https://auth-979d8-default-rtdb.firebaseio.com",
   projectId: "auth-979d8",
   storageBucket: "auth-979d8.appspot.com",
