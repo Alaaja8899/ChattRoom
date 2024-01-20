@@ -69,17 +69,17 @@ export default function ChattRoom() {
   }, [snapshot]);
 
   return (
-    <div className='md:w-[30rem] w-full flex flex-col h-full bg-msgBodyBg'>
+    <div className='md:w-[30rem] w-full flex flex-col h-full bg-msgBodyBg relative'>
       {/* Header section */}
-      <header className='flex bg-headerBg justify-between h-[60px] items-center '>
-        <h2 className='qurxin text-2xl px-3'>⚛️🔥💬</h2>
-        <button onClick={SignOut} className=' bg-bodyBgColor  w-[11rem] rounded font-bold h-5/6 mx-1'>
+      <header className='flex bg-headerBg justify-between h-[60px] items-center fixed top-0 right-0 left-0 py-1 shadow'>
+        <h2 className='qurxin text-2xl px-3'>⚛️🔥💬 Alaaja</h2>
+        <button onClick={SignOut} className=' bg-bodyBgColor  w-[11rem] rounded font-bold h-5/6 mx-1 border-2 border-[grey]'>
           Signout
         </button>
       </header>
 
       {/* Main chat body */}
-      <div className='msgBody h-full overflow-y-scroll gap-3 flex flex-col p-2' ref={chatBodyRef}>
+      <div className='msgBody h-full overflow-y-scroll gap-3 flex flex-col p-2 pt-[65px]' ref={chatBodyRef}>
         <h2 className='text-center text-[grey] py-5 px-3'>Welcome to the chat 👋 {displayName}</h2>
         {/* Rendering messages */}
         {snapshot && snapshotToArray(snapshot).map((chat) => <MessageComponent user={user[0]} data={chat} />)}

@@ -7,11 +7,11 @@ export default {
   theme: {
     extend: {},
     colors:{
-      bodyBgColor : "#282c34",
+      bodyBgColor : "#0B0F29",
       headerBg:"#181717",
-      msgBodyBg:"rgb(40, 37, 53)",
+      msgBodyBg:"#080A1A",
       FormBg:"rgb(24, 23, 23)",
-      btnBg:"rgb(56, 56, 143)"
+      btnBg:"#f20000"
     }
   },
   plugins: [],

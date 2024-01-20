@@ -17,7 +17,8 @@ function SignIn() {
         <div className="intro text-center">
             <p className="warning">Do not violate the community guidelines or you will be banned for life! 💀</p>
             <br />
-            <p className="warning">Wax rabsha ah hasameen haddii kale ciwanka dhanaa lagaa xiraa 💀</p>
+
+            <p>To go into the chatt-room simply click the SigInWithGoogle button below</p>
 
         </div>
 
