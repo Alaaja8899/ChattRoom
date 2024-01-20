@@ -68,14 +68,56 @@ export default function ChattRoom() {
     scrollToBottom();
   }, [snapshot]);
 
+
+
+
+
+  const [isFullScreen, setIsFullScreen] = useState(false);
+
+  const fullScreen = () => {
+    let app = document.documentElement;
+
+    if (isFullScreen) {
+      // If already in fullscreen, exit fullscreen
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      }
+    } else {
+      // If not in fullscreen, request fullscreen
+      if (app.requestFullscreen) {
+        app.requestFullscreen();
+      } else if (app.mozRequestFullScreen) {
+        app.mozRequestFullScreen();
+      } else if (app.webkitRequestFullscreen) {
+        app.webkitRequestFullscreen();
+      } else if (app.msRequestFullscreen) {
+        app.msRequestFullscreen();
+      }
+    }
+
+    // Toggle the state to reflect the current fullscreen status
+    setIsFullScreen(!isFullScreen);
+  };
+
   return (
     <div className='md:w-[30rem] w-full flex flex-col h-full bg-msgBodyBg relative'>
       {/* Header section */}
       <header className='flex bg-headerBg justify-between h-[60px] items-center fixed top-0 right-0 left-0 py-1 shadow'>
         <h2 className='qurxin text-2xl px-3'>⚛️🔥💬 Alaaja</h2>
+        <div className="corner flex items-center">
         <button onClick={SignOut} className=' bg-bodyBgColor  w-[11rem] rounded font-bold h-5/6 mx-1 border-2 border-[grey]'>
           Signout
         </button>
+        <span className='px-4 text-2xl font-bold cursor-pointer' onClick={fullScreen}>
+        ⛶
+        </span>
+        </div>
       </header>
 
       {/* Main chat body */}
