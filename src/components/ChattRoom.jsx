@@ -114,9 +114,9 @@ export default function ChattRoom() {
         <button onClick={SignOut} className=' bg-bodyBgColor  w-[11rem] rounded font-bold h-5/6 mx-1 border-2 border-[grey]'>
           Signout
         </button>
-        <span className='px-4 text-2xl font-bold cursor-pointer' onClick={fullScreen}>
+        {/* <span className='px-4 text-2xl font-bold cursor-pointer' onClick={fullScreen}>
         ⛶
-        </span>
+        </span> */}
         </div>
       </header>
 
